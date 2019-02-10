@@ -1,0 +1,7 @@
+^BUILTINCMD
+CD	cd
+EXIT	exit
+SOURCE	source
+PATH	path
+ALIAS	alias
+HELP	help
