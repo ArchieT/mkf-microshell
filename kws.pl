@@ -24,7 +24,7 @@ foreach my $line ( <STDIN> ) {
                 unless defined $string;
         push @strings, $string;
 }
-print "enum KWS_$prefix {", "\n\t";
+print "enum KW_$prefix {", "\n\t";
 my $pozycja;
 $pozycja = 0;
 print join ", \n\t", map {
