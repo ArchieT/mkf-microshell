@@ -29,6 +29,7 @@ set(HEADER_FILES
 	)
 
 set(SOURCES
+	kws.pl
 	${SOURCE_FILES}
 	${HEADER_FILES}
 	${KWS_DAT_FILES}
