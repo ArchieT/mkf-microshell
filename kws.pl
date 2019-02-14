@@ -33,7 +33,7 @@ print join ", \n\t", map {
         $result;
 } @names;
 my $namesliteral = join "\", \n\t\"", @names;
-print "\n}\n\n",
+print "\n};\n\n",
         "extern const char* KWS_${prefix}[] = {", "\n",
         "\t\"$namesliteral\"\n",
-        "}\n";
+        "};\n";
