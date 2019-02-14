@@ -1,4 +1,4 @@
-#include <input.h>
+#include "input.h"
 
 #define INPUT_BUFFER_INITIAL_SIZE 1024
 #define INPUT_BUFFER_EXTENSION_BLKSIZE 4096
