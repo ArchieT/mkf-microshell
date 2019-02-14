@@ -1,4 +1,5 @@
 //#include <readline/readline.h>
+#include "input.h"
 #include <stdio.h>
 
 int repl()
