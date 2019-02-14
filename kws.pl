@@ -32,8 +32,11 @@ print join ", \n\t", map {
         ++$pozycja;
         $result;
 } @names;
-my $namesliteral = join "\", \n\t\"", @names;
+my $stringsliteral = join "\", \n\t\"", @strings;
 print "\n};\n\n",
         "extern const char* KWS_${prefix}[] = {", "\n",
-        "\t\"$namesliteral\"\n",
+        "\t\"$stringsliteral\"\n",
         "};\n";
+
+my %kws;
+@kws{@strings} = @names;
