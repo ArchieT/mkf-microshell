@@ -24,6 +24,10 @@ foreach my $line ( <STDIN> ) {
                 unless defined $string;
         push @strings, $string;
 }
+print << "END";
+#ifndef KWH_$prefix\n
+#define KWH_$prefix\n\n
+END
 print "enum KW_$prefix {", "\n\t";
 my $pozycja;
 $pozycja = 0;
@@ -34,9 +38,10 @@ print join ", \n\t", map {
 } @names;
 my $stringsliteral = join "\", \n\t\"", @strings;
 print "\n};\n\n",
-        "extern const char* KWS_${prefix}[] = {", "\n",
+        "extern const char* const KWS_${prefix}[] = {", "\n",
         "\t\"$stringsliteral\"\n",
         "};\n";
 
 my %kws;
 @kws{@strings} = @names;
+print "\n#endif // KWH_$prefix\n";
