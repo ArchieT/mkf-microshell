@@ -58,7 +58,7 @@ while ((my $string, my $name) = each (%kws)) {
 
 use Storable qw(dclone);
 
-my %kwtpoppy = %{ dclone (\%kwt) }
+my %kwtpoppy = %{ dclone (\%kwt) };
 my @kwtsor;
 my @kwtpoista;
 sub kwt_trav {
