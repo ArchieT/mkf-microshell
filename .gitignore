@@ -1,5 +1,8 @@
 mkf-microshell
 *.kws.h
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
 
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
