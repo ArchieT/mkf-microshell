@@ -44,4 +44,19 @@ print "\n};\n\n",
 
 my %kws;
 @kws{@strings} = @names;
+my %kwt;
+while ((my $string, my $name) = each (%kws)) {
+        my $kwtref = \%kwt;
+        for(; length $string > 0; $string = substr $string, 1) {
+                $$kwtref{ord $string} = {}
+                        unless exists($$kwtref{ord $string});
+                $kwtref = $$kwtref{ord $string};
+        }
+        $$kwtref{0} = $name;
+
+}
+
+use Data::Dumper;
+print STDERR Dumper(%kwt);
+
 print "\n#endif // KWH_$prefix\n";
