@@ -28,8 +28,8 @@ print "enum KW_$prefix {", "\n\t";
 my $pozycja;
 $pozycja = 0;
 print join ", \n\t", map {
-        my $result = "KW_${prefix}_$_ = $pozycja";
         ++$pozycja;
+        my $result = "KW_${prefix}_$_ = $pozycja";
         $result;
 } @names;
 my $stringsliteral = join "\", \n\t\"", @strings;
