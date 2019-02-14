@@ -25,6 +25,7 @@ list(TRANSFORM KWS_NAMES_W_SUFFIX APPEND ".h" OUTPUT_VARIABLE KWS_HEADER_FILES)
 set(HEADER_FILES
 	helpfulcontrolsequences.h
 	input.h
+	kws_common.h
 	${KWS_HEADER_FILES}
 	)
 

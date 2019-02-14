@@ -56,6 +56,19 @@ while ((my $string, my $name) = each (%kws)) {
 
 }
 
+use Storable qw(dclone);
+
+my %kwtpoppy = %{ dclone (\%kwt) }
+my @kwtsor;
+my @kwtpoista;
+sub kwt_trav {
+        # ukladamy liste nodow
+        # wartosc dlugosc_syna&co syn&co [brat&co]...
+        # wrzucajac node'a trzeba miec calkowita jego wielkosc
+        # chcemy posortowane node'y leksykograficznie
+        #my $kwtref
+}
+
 use Data::Dumper;
 print STDERR Dumper(%kwt);
 
