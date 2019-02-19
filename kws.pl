@@ -56,6 +56,9 @@ while ((my $string, my $name) = each (%kws)) {
 
 }
 
+use Data::Dumper;
+print STDERR Dumper(%kwt);
+
 use Storable qw(dclone);
 
 my %kwtpoppy = %{ dclone (\%kwt) };
@@ -68,8 +71,5 @@ sub kwt_trav {
         # chcemy posortowane node'y leksykograficznie
         #my $kwtref
 }
-
-use Data::Dumper;
-print STDERR Dumper(%kwt);
 
 print "\n#endif // KWH_$prefix\n";
